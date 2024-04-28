@@ -1,14 +1,13 @@
 import requests
-
-
+import time
 def fetchAndSave(url, path):
-    r=requests.get(url)
-    with open(path,"w") as f:
+    time.sleep(15)  # Wait for 5 seconds
+    r = requests.get(url)
+    with open(path, "w") as f:
         f.write(r.text)
 
-url ="https://aktu.ac.in/"
 
-# r= requests.get(url)
+url = "https://srip.iitgn.ac.in/portal/projects/"
 
-fetchAndSave(url, "aktu.html")
+fetchAndSave(url, "iitg.html")
 
